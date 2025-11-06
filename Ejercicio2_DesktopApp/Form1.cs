@@ -133,23 +133,23 @@ namespace Ejercicio2_DesktopApp
 
 
 
-                    //actualizo la lista de camiones en el comboBox
-                    cBoxCamiones.Items.Clear();
 
-                    foreach (string s in miEmpresa.CamionesCargados())
-                    {
-                        cBoxCamiones.Items.Add(s);
-                    }
-                    if (cBoxCamiones.Items.Count > 0)
-                    {
-                        cBoxCamiones.SelectedIndex = 0;
-                        camionElegido = 0;
-                        VerCarga();
-                    }
-                    tBkg.Text = 0.ToString();
-                    listBcargas.Items.Clear();
-                    
-                
+                //actualizo la lista de camiones en el comboBox
+                cBoxCamiones.Items.Clear();
+
+                foreach (string s in miEmpresa.CamionesCargados())
+                {
+                    cBoxCamiones.Items.Add(s);
+                }
+                if (cBoxCamiones.Items.Count > 0)
+                {
+                    cBoxCamiones.SelectedIndex = 0;
+                    camionElegido = 0;
+                    VerCarga();
+                }
+                tBkg.Text = 0.ToString();
+                listBcargas.Items.Clear();
+
             }
             catch (Exception ex)
             {
