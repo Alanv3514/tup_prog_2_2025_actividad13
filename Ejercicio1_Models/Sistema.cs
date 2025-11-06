@@ -27,7 +27,7 @@
             }
             return camiones;
         }
-        public void Descargar(FileStream archivo)//este se usa para el boton Importar Paquetes Pedidos
+        public void Descargar(Stream archivo)//este se usa para el boton Importar Paquetes Pedidos
         {
             StreamReader sr = new StreamReader(archivo);
             string linea;

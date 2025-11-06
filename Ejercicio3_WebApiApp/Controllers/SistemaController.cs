@@ -8,12 +8,19 @@ namespace Ejercicio3_WebApiApp.Controllers
     [ApiController]
     public class SistemaController : ControllerBase
     {
-        static Sistema miSistema = new Sistema();
+        static Sistema miEmpresa = new Sistema();
+        [HttpPost("DescargarCamion")]
+        public ActionResult PostDescargarCamion(IFormFile manifiesto)
+        {
+            Stream s = manifiesto.OpenReadStream();
+            miEmpresa.Descargar(s);
+            return Ok("Paquetes importados correctamente.");
+        }
         // GET: api/<SistemaController>
         [HttpGet("CamionesCargados")]
         public ActionResult<string[]> Get()
         {
-            string[] camiones = miSistema.CamionesCargados();
+            string[] camiones = miEmpresa.CamionesCargados();
             if (camiones.Length == 0)
                 return NotFound("No hay camiones cargados.");
 
