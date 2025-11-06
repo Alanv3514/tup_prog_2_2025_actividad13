@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# SYSLIB0011: El tipo o el miembro están obsoletos
+dotnet_diagnostic.SYSLIB0011.severity = none
+
+# IDE0090: Usar "new(...)"
+dotnet_diagnostic.IDE0090.severity = silent
